@@ -47,7 +47,7 @@ public class SpinPlanet : MonoBehaviour {
 		spin = !spin;
 		if (buttonText != null) 
 		{
-			buttonText.text = spin ? "Stop Auot Spinning" : "Start Auto Spinning";
+			buttonText.text = spin ? "Stop Auto Spinning" : "Start Auto Spinning";
 		}
 	}
 }

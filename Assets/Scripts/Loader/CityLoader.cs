@@ -16,11 +16,6 @@ public class CityLoader : MonoBehaviour
         LoadCitiesJSON("cities.json");
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
     private void ReadJson(string json)
     {
         _cities = JsonUtility.FromJson<Cities>(json);
@@ -34,7 +29,6 @@ public class CityLoader : MonoBehaviour
         string json = reader.ReadToEnd();
         reader.Close();
         ReadJson(json);
-        Debug.Log(_cities.City[0].name);
 #elif UNITY_WEBGL
         StartCoroutine(LoadCitiesJsonWR(jsonFile));
 #endif
